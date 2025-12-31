@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Someone Special ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+min-height:100vh;
+background:
+radial-gradient(circle at top,#2b1055,#12001f 70%),
+url("https://www.transparenttextures.com/patterns/stardust.png");
+color:white;
+font-family:Poppins,sans-serif;
+text-align:center;
+overflow-x:hidden;
+}
+
+/* floating hearts */
+.hearts{position:fixed;inset:0;pointer-events:none}
+.hearts span{
+position:absolute;
+color:#ff7eb3;
+font-size:20px;
+animation:float 8s linear infinite;
+opacity:.6;
+}
+@keyframes float{
+from{transform:translateY(110vh)}
+to{transform:translateY(-10vh)}
+}
+
+.screen{display:none;min-height:100vh;padding:50px 20px}
+.active{display:block}
+
+h1,h2{
+font-family:'Dancing Script',cursive;
+text-shadow:0 0 15px rgba(255,180,255,.7);
+}
+
+/* heart */
+#heart{
+font-size:95px;
+cursor:pointer;
+animation:pulse 1.4s infinite;
+filter:drop-shadow(0 0 25px #ff7eb3);
+}
+@keyframes pulse{50%{transform:scale(1.25)}}
+
+.progress{
+width:240px;height:10px;
+background:#ffffff33;
+margin:25px auto;
+border-radius:20px;
+overflow:hidden;
+}
+.bar{
+height:100%;width:0%;
+background:linear-gradient(90deg,#ff6fae,#ffd700);
+}
+
+/* golden ticket */
+.ticket{
+background:linear-gradient(135deg,#ffe08a,#fbbf24);
+color:#4a2c00;
+max-width:520px;
+margin:40px auto;
+padding:32px;
+border-radius:26px;
+box-shadow:0 20px 45px rgba(255,215,0,.7);
+position:relative;
+}
+.ticket:before,.ticket:after{
+content:"";
+position:absolute;
+top:50%;
+width:28px;height:28px;
+background:#12001f;
+border-radius:50%;
+transform:translateY(-50%);
+}
+.ticket:before{left:-14px}
+.ticket:after{right:-14px}
+
+/* quotes 2x3 */
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+max-width:560px;
+margin:40px auto;
+}
+.quote{
+background:linear-gradient(135deg,#fff1c1,#fde68a);
+color:#7a4a00;
+padding:22px;
+border-radius:20px;
+font-family:'Dancing Script',cursive;
+font-size:18px;
+box-shadow:0 8px 25px rgba(0,0,0,.3);
+}
+
+/* card */
+.card{
+background:linear-gradient(135deg,#ffffff,#fff7ed);
+color:#3b2f2f;
+padding:36px;
+border-radius:30px;
+max-width:520px;
+margin:40px auto;
+box-shadow:0 25px 60px rgba(0,0,0,.35);
+}
+
+/* button */
+button{
+margin-top:30px;
+padding:14px 40px;
+border:none;
+border-radius:35px;
+background:linear-gradient(135deg,#ff5fa2,#ff9acb);
+color:white;
+font-size:16px;
+cursor:pointer;
+box-shadow:0 10px 30px rgba(255,100,180,.6);
+}
+</style>
+</head>
+
+<body>
+
+<!-- PASSWORD -->
+<script>
+var password = "cutie123";
+var userPass = prompt("🔒 Enter the secret password");
+if(userPass !== password){
+document.body.innerHTML = `
+<h1 style="margin-top:20%">❌ Access Denied</h1>
+<p>This surprise is private 💖</p>`;
+}
+</script>
+
+<!-- hearts -->
+<div class="hearts">
+<span style="left:10%">💖</span>
+<span style="left:30%">💕</span>
+<span style="left:50%">❤️</span>
+<span style="left:70%">💗</span>
+<span style="left:90%">💞</span>
+</div>
+
+<!-- screen 1 -->
+<div id="s1" class="screen active">
+<h2>Hold the heart ❤️</h2>
+<div id="heart">❤️</div>
+<div class="progress"><div id="bar" class="bar"></div></div>
+</div>
+
+<!-- screen 2 -->
+<div id="s2" class="screen">
+<div class="ticket">
+<h1>🎟 GOLDEN TICKET</h1>
+<p>Unlimited Love & Smiles</p>
+<p>Valid Forever ✨</p>
+</div>
+<button onclick="next()">Next</button>
+</div>
+
+<!-- screen 3 -->
+<div id="s3" class="screen">
+<h1>For my Cutiepie 💕</h1>
+<div class="grid">
+<div class="quote">In all the world, there is no heart for me like yours..💗</div>
+<div class="quote">I admire you for what you are and what I become with you ✨</div>
+<div class="quote">If you live to be a hundred, I want to live to be a hundred minus one day so I never have to live without you.  🌸</div>
+<div class="quote"> I wish I could turn back the clock. I'd find you sooner and stayed with you for longer ☀️</div>
+<div class="quote">The best and most beautiful things in the world cannot be seen or even touched—they must be felt with the heart  💖</div>
+<div class="quote">Our souls already know each other, don't they? It's our bodies that are new 🫶</div>
+</div>
+<button onclick="next()">Next</button>
+</div>
+
+<!-- screen 4 : HAPPY NEW YEAR -->
+<div id="s4" class="screen">
+<div class="card">
+<h1>And finally happy new year to that one girl who met me at the end of the year 2025, but made my year worth of living. i admire you a lot and thankful to you that you talked to me and that too, this much nicely. i didn't know i was your good decision of talking or am i worth of it. i just know that there is no one who can compare you and also please keep that cutu smile on your beautiful face always.. 🎆</h1>
+<p>
+To the girl who came at the end of 2025  
+but made the whole year worth remembering 💕  
+Thank you for talking to me, for being kind,  
+and for being you.
+</p>
+</div>
+<button onclick="next()">Next</button>
+</div>
+
+<!-- screen 5 : LAST MESSAGE (NEW) -->
+<div id="s5" class="screen">
+<div class="card">
+<h1>Thanks for being there whole time listening to all my talks and make me feel special in every way. you aren't ready i understand so, consider this as a good bye message and gift from my side💌💖..</h1>
+<p>
+This isn’t a promise or an expectation,  
+just something honest from my heart.  
+No matter where life goes,  
+meeting you will always stay special to me ✨  
+<br><br>
+Keep smiling… it suits you the most 💫
+</p>
+</div>
+</div>
+
+<script>
+let current=1,progress=0,hold;
+const heart=document.getElementById("heart");
+const bar=document.getElementById("bar");
+
+heart.onmousedown=()=>{
+hold=setInterval(()=>{
+progress+=2;
+bar.style.width=progress+"%";
+if(progress>=100){clearInterval(hold);next();}
+},30);
+};
+heart.onmouseup=reset;
+heart.onmouseleave=reset;
+
+function reset(){
+clearInterval(hold);
+progress=0;
+bar.style.width="0%";
+}
+function next(){
+document.getElementById("s"+current).classList.remove("active");
+current++;
+document.getElementById("s"+current).classList.add("active");
+}
+</script>
+
+</body>
+</html>
